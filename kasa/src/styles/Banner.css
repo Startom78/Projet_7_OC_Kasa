@@ -5,28 +5,11 @@
     
 }
 
-h1,h2,h3,li {
-    font-family: 'Montserrat';
+h1,li {
+    font-family: 'Montserrat', sans-serif;
 }
 
-.logo {
-    margin: 25px 50px 0px 50px;
-    border: 1px solid purple;
-}
 
-.navbar {
-    
-    margin: 25px 100px 0px 0px;
-    border: 1px solid blue; 
-    color: #FF6060;
-    font-weight: 500;
-}
-
-.navOptions {
-    display: flex;
-    font-size: 24px;
-    gap: 100px;
-}
 
 a {
     text-decoration: none;
@@ -42,21 +25,28 @@ a:visited {
 
 .banner {
     display: flex;
+    align-items: center;
     justify-content: center;
+    overflow: hidden;
+    border: 1px solid brown;
+    margin: 0px 50px 0px 50px;
+    border-radius: 25px;
+    height: 200px;
+    
 }
 
 .imgBanner {
     position: relative;
     border: 1px solid green;
-    width: 20%;
-    height: 100%;
-    border-radius: 20px;
-    background-color:rgba(255, 255, 255, 0.8);
-    text-align: center;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
 }
-.title {
+h1 {
     display: flex;
     position: absolute;
-    color: red;
-    margin : auto;
+    color: white;
+    border: 1px solid orange;
+    font-weight: 500;
+    font-size: 48px;
 }
