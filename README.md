@@ -1,1 +1,0 @@
-# README du projet 7 OpenClassrooms

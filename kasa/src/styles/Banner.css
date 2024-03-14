@@ -1,0 +1,62 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+    
+}
+
+h1,h2,h3,li {
+    font-family: 'Montserrat';
+}
+
+.logo {
+    margin: 25px 50px 0px 50px;
+    border: 1px solid purple;
+}
+
+.navbar {
+    
+    margin: 25px 100px 0px 0px;
+    border: 1px solid blue; 
+    color: #FF6060;
+    font-weight: 500;
+}
+
+.navOptions {
+    display: flex;
+    font-size: 24px;
+    gap: 100px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #FF6060;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+}
+
+.imgBanner {
+    position: relative;
+    border: 1px solid green;
+    width: 20%;
+    height: 100%;
+    border-radius: 20px;
+    background-color:rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+.title {
+    display: flex;
+    position: absolute;
+    color: red;
+    margin : auto;
+}
