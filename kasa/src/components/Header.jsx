@@ -12,8 +12,8 @@ function Header() {
                     <nav> {/* A modifier plus tard */}
                         <ul className='navOptions'> 
                             
-                            <a href = '#'> Accueil </a> 
-                            <a href= '#'> A propos </a>  
+                            <a href = '#' onClick = {clicked}> Accueil </a> 
+                            <a href= '#' onClick = {clicked}> A propos </a>  
                         </ul>
                     </nav>
                 </div>
@@ -22,4 +22,7 @@ function Header() {
      )
 }
 
+function clicked() {
+    console.log("Erreur 404...pour l'instant !")
+}
 export default Header;
