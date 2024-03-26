@@ -1,22 +1,20 @@
-import Header from '../../components/Header'
 import Banner from '../../components/Banner'
-import BackgroundMain from '../../components/Background_Main'
+import Cards from '../../components/Cards'
 import Card from '../../components/Card'
-import Footer from '../../components/Footer'
+import Layout from '../../components/Layouts/LayoutHome'
 
 
-function App() {
-    
+function Home() {
+    const array = [{title: "logement 1"}, {title : "logement 2"}, {title: "logement 3"} ]
     return (
-     
-        <div> 
-           <Header />
-            <Banner /> 
-            <BackgroundMain />
-            <Card />
-            <Footer />
-        </div>
-
-)
+        <Layout 
+            hero = {<Banner />} 
+            content={
+                <Cards>
+                   {array.map((logement,index) => <Card key = {"card-"+ index + "-" + logement.title} title = {logement.title}/>)}
+               </Cards>
+            } 
+        />     
+    )
 }
-export default App;
+export default Home

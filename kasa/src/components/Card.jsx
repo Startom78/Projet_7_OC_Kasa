@@ -1,9 +1,9 @@
 import '../styles/card.css'
 
-function Card() {
+function Card({title}) {
     return (
             <article className='card'>
-                        <p> Projet en construction </p>
+                        <p> {title} </p>
             </article>
 
     )

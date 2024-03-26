@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png'
 import '../styles/Header.css'
 
@@ -12,8 +13,8 @@ function Header() {
                     <nav> {/* A modifier plus tard */}
                         <ul className='navOptions'> 
                             
-                            <a href = '#' onClick = {clicked}> Accueil </a> 
-                            <a href= '#' onClick = {clicked}> A propos </a>  
+                            <Link to = '/'> Accueil </Link> 
+                            <Link to = '/about' > A propos </Link>  
                         </ul>
                     </nav>
                 </div>
