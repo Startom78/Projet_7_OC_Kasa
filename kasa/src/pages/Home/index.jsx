@@ -5,10 +5,12 @@ import Layout from '../../components/Layouts/LayoutHome'
 
 
 function Home() {
-    const array = [{title: "logement 1"}, {title : "logement 2"}, {title: "logement 3"} ]
+    const array = [{title: "logement 1"}, {title : "logement 2"}, {title: "logement 3"}, {title: "logement 4"}, {title: "logement 5"} ]
     return (
         <Layout 
-            hero = {<Banner />} 
+            hero = {<Banner
+                imageUrl={'./images/header_banner.png'}
+                showTitle={true} />} 
             content={
                 <Cards>
                    {array.map((logement,index) => <Card key = {"card-"+ index + "-" + logement.title} title = {logement.title}/>)}

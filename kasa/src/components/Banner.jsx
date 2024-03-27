@@ -1,10 +1,10 @@
 import '../styles/Banner.css'
 
-function Banner() {
+function Banner({imageUrl, showTitle}) {
     return (     
         <div className='banner'>
-            <img src= "./images/header_banner.png" alt = " Banniere de Kasa" className='imgBanner'/>
-            <h1> Chez vous, partout et ailleurs </h1>
+            <img src= {imageUrl} alt = " Banniere de Kasa" className='imgBanner'/>
+            {showTitle && <h1> Chez vous, partout et ailleurs </h1>}
         </div>
     
     )

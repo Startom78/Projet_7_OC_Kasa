@@ -1,20 +1,29 @@
+import { Link } from 'react-router-dom';
+import '../styles/main404.css'
+import '../styles/editNumber.css'
+import '../styles/editText404.css'
+import '../styles/linkToMain.css'
+
+
 function Error() {
     return (
-        <main>
+        <div className="main404">
 
-            <div>
-                <p className="editNumber"> 404 </p>
+            <div className="editNumber404">
+                <p> 404 </p>
             </div>
 
-            <div className="editText">
-                <p> Oups! La page que vous demandez n'existe pas </p>
+            <div className="editText404">
+                <p> Oups! La page que vous demandez n'existe pas. </p>
             </div>
 
-            <a href= '#' className="editLink">
-                <p> Retourner à la page d'accueil </p>
-            </a>
+            <div className='linkToMain'>
+                <Link to = '/' > Retourner sur la page d'accueil </Link>
 
-        </main>
+            </div>
+
+
+        </div>
 
     )
 }

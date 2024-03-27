@@ -1,9 +1,11 @@
 .cards {
-    display: flex;
-    border-radius: 25px;
-    height: 500px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 340px);
+    grid-auto-rows: 340px;
+    height: 100%;
     width: 100%;
-    background-color: #F6F6F6;
-    border: 1px solid yellowgreen;
+    gap: 50px;
+    
 }
 
