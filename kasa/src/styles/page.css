@@ -1,0 +1,20 @@
+.pageLayout{
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+.pageLayout .main {
+    flex: 1;
+
+}
+
+.pageLayout .wrapper{
+    padding: 0 44px;
+}
+
+.pageLayout .header{
+    display: flex;
+    height: 160px;
+    align-items: center;
+}

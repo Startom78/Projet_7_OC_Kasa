@@ -1,8 +1,5 @@
 import { Link } from 'react-router-dom';
 import '../styles/main404.css'
-import '../styles/editNumber.css'
-import '../styles/editText404.css'
-import '../styles/linkToMain.css'
 
 
 function Error() {

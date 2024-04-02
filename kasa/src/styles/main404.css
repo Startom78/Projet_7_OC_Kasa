@@ -2,7 +2,25 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    justify-content: center;
     color:  #FF6060;
-    width: auto;
-    height: auto;
+    border: 1px solid green;
+}
+
+.editNumber404 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 288px;
+}
+
+.editText404 {
+    font-weight: 500;
+    font-size: 35px;
+}
+
+.linkToMain {
+    font-size: 16px;
+    margin-top: 50px;
 }

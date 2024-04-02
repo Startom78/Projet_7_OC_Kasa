@@ -1,17 +1,20 @@
 import Header from "../Header";
 import Footer from "../Footer"
 import '../../styles/LayoutHome.css'
+import LayoutPage from "./LayoutPage";
 
 const Layout = ({hero,content}) => {
     return (
-        <>
-            <div className="LayoutHome">
-                <Header />
-                    {hero}
-                    {content}
+        <LayoutPage
+            header = {<Header />}
+            main = 
+            {<div className="">
+                {hero}
+                {content}
             </div>
-            <Footer />
-        </>
+            }
+            footer={<Footer />}
+        />
     )
 }
 
