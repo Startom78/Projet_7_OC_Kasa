@@ -8,9 +8,9 @@ const LayoutPage = ({header, main, footer}) => {
                 {header}
              </header>
 
-            <main className='main wrapper'>
+            <div className='wrapper'>
                 {main}
-            </main>
+            </div>
 
             <footer className='footer'>
                 {footer}

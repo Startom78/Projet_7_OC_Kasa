@@ -11,6 +11,7 @@
 
 .pageLayout .wrapper{
     padding: 0 44px;
+    flex: 1;
 }
 
 .pageLayout .header{

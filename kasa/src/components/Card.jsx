@@ -1,9 +1,14 @@
+import { Link } from 'react-router-dom';
 import '../styles/card.css'
 
-function Card({title}) {
+
+function Card({title, cover}) {
     return (
             <article className='card'>
-                        <p> {title} </p>
+                
+                <p className='description'> {title} </p>
+                <img className = 'imgCard' src={cover} alt = '' />
+                <Link to ='/vincelebg' className='link' /> 
             </article>
 
     )

@@ -4,45 +4,63 @@ import { FaChevronUp, FaChevronDown } from 'react-icons/fa'
 
 function AboutComponent()  {
 
-        const [isOpen, setIsOpen] = useState(false)
+        const [fiabilityIsOpen, setFiability] = useState(false)
+        const [respectIsOpen, setRespect] = useState(false)
+        const [serviceIsOpen, setService] = useState(false)
+        const [securityIsOpen, setSecurity] = useState(false)
       
-        const toggleCollapse = () => {
-          setIsOpen(!isOpen)
+        const toggleCollapseFiability = () => {
+            setFiability(!fiabilityIsOpen)
+        }
+
+        const toggleCollapseRespect = () => {
+
+            setRespect(!respectIsOpen)
+        }
+
+        const toggleCollapseService = () => {
+
+            setService(!serviceIsOpen)
+        }
+
+        const toggleCollapseSecurity = () => {
+
+            setSecurity(!securityIsOpen)
         }
     return (
         <div className='collapsers'>
-            <div className="collapser" onClick={toggleCollapse}>
+            <div className="collapser" >
                 <h2>Fiabilité </h2>
-                <span className='chevron'>{isOpen ? <FaChevronUp /> : <FaChevronDown />}</span>
+                <span className='chevron' onClick={toggleCollapseFiability} >{fiabilityIsOpen ? <FaChevronUp /> : <FaChevronDown />}</span>
             </div>
-                {isOpen && 
+                {fiabilityIsOpen && 
                 <div className="text">
                     <p> La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.</p>
                  </div>} 
 
-            <div className="collapser" onClick={toggleCollapse}>
+            <div className="collapser" >
                 <h2> Respect </h2>
-                <span className='chevron'>{isOpen ? <FaChevronUp /> : <FaChevronDown />}</span>
+                <span className='chevron' onClick={toggleCollapseRespect} >{respectIsOpen ? <FaChevronUp /> : <FaChevronDown />}</span>
             </div>
-            {isOpen && 
+            {respectIsOpen && 
                 <div className="text">
                     <p> La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.</p>
                 </div>}
 
-            <div className="collapser" onClick={toggleCollapse}>
+            <div className="collapser" >
                 <h2> Service</h2>
-                <span className='chevron'>{isOpen ? <FaChevronUp /> : <FaChevronDown />}</span>
+                <span className='chevron' onClick={toggleCollapseService}> {serviceIsOpen ? <FaChevronUp /> : <FaChevronDown />}</span>
             </div>
-            {isOpen && 
+            {serviceIsOpen && 
                 <div className="text">
                     <p> La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.</p>
                 </div>}
 
-            <div className="collapser" onClick={toggleCollapse}>
+            <div className="collapser" >
                 <h2> Sécurité </h2>
-                <span className='chevron'>{isOpen ? <FaChevronUp /> : <FaChevronDown />}</span>
+                <span className='chevron' onClick={toggleCollapseSecurity}> {securityIsOpen? <FaChevronUp /> : <FaChevronDown />}</span>
             </div>
-            {isOpen && 
+            {securityIsOpen && 
                 <div className="text">
                     <p> La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.</p>
                 </div>}

@@ -4,4 +4,27 @@
     width: 340px;
     height: 340px;
     background: linear-gradient(180deg, rgba(255,96,96,1) 21%, rgba(170,90,90,1) 100%);
+    position: relative;
+}
+
+.imgCard {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.description{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    position: absolute;
+    width: 50%;
+    bottom: 0;
+    padding: 10px;
+    color: white;
+}
+
+.link{
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
