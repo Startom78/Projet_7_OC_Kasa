@@ -1,10 +1,15 @@
 import { useParams } from "react-router-dom"
+import Header from "../../components/Header"
+import '../../styles/Header.css'
 
 const Product = () => {
     const params = useParams()
     console.log('Product', params)
 
-    return (<h1> {'product:' + params.id} </h1>)
+    return (
+        <Header />
+
+    )
 }
 
 export default Product

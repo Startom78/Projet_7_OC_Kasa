@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom';
 import '../styles/card.css'
 
 
-function Card({title, cover}) {
+function Card({title, cover, link}) {
     return (
-            <article className='card'>
+            <figure className='card'>
                 
-                <p className='description'> {title} </p>
                 <img className = 'imgCard' src={cover} alt = '' />
-                <Link to ='/vincelebg' className='link' /> 
-            </article>
+                <figcaption className='description'> {title} </figcaption>
+                <Link to = {link} className='link' /> 
+            </figure>
 
     )
 }

@@ -15,7 +15,7 @@ function Home() {
                 showTitle={true} />} 
             content={
                 <Cards>
-                   {array.map((logement,index) => <Card key = {"card-"+ index + "-" + logement.title} title = {logement.title} cover = {logement.cover}/>)}
+                   {array.map((logement,index) => <Card key = {"card-"+ index + "-" + logement.title} title = {logement.title} cover = {logement.cover} link = {"/product/" + logement.id} />)}
                </Cards>
             } 
         />     

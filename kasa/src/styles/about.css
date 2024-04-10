@@ -1,0 +1,12 @@
+.collapsers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid purple;
+    gap: 30px;
+    padding: 0 5%;
+}
+
+.collapsers .text{
+    color: #FF6060;
+}

@@ -8,7 +8,7 @@ const Layout = ({hero,content}) => {
         <LayoutPage
             header = {<Header />}
             main = 
-            {<div className="">
+            {<div className="layout-page">
                 {hero}
                 {content}
             </div>
