@@ -18,4 +18,4 @@ const Layout = ({hero,content}) => {
     )
 }
 
-export default Layout;
+export default Layout

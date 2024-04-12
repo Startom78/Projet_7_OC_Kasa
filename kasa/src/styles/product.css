@@ -1,0 +1,102 @@
+h2, h3{
+  color:  #FF6060;
+}
+
+h2{
+  font-size: 36px;
+  font-weight: 500;
+}
+
+h3{
+  font-size: 18px;
+}
+
+.productBanner {
+    display: flex;
+    position: relative;
+    justify-content: center; 
+    align-items: center;
+    border: 1px solid red;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  
+  .productBanner .imgProduct {
+    display: block;
+    width: 100%;
+    height: auto; 
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  .productBanner .chevron {
+    position: absolute;
+    font-size: 100px;
+    font-weight: 100;
+    color: white;
+    border: 1px solid blue;
+    cursor: pointer;
+
+  }
+  
+  .chevron:first-child {
+    left: 0; 
+  }
+  
+  .chevron:last-child {
+    right: 0; 
+  }
+  
+
+.productLayout .wrapper{
+    padding: 0 44px;
+    flex: 1;
+}
+
+ .productLayout .counter {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    bottom: 20px;
+    font-weight: bold;
+    color: black;
+    border: 1px solid green;
+}
+
+.main{
+  position: relative;
+  margin-top: 20px;
+}
+
+.tag{
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  min-width: 150px;
+  margin-right: 20px;
+  background-color: #FF6060;
+  color: white;
+}
+
+.imgProfile{
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.profileAndStars{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  gap: 20px;
+}
+
+.collapserProduct{
+  border: 1px solid yellow;
+  width: 40%;
+}
+

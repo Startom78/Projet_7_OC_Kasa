@@ -1,13 +1,20 @@
-import { useParams } from "react-router-dom"
-import Header from "../../components/Header"
 import '../../styles/Header.css'
+import '../../styles/Footer.css'
+import Header from "../../components/Header"
+import Footer from "../../components/Footer"
+import ProductComponent from "../../components/Product"
+import LayoutProduct from '../../components/Layouts/LayoutProduct'
 
 const Product = () => {
-    const params = useParams()
-    console.log('Product', params)
 
     return (
-        <Header />
+        <LayoutProduct 
+
+            header = {<Header />}
+            main = {<ProductComponent />}
+            footer= {<Footer />}
+
+         />
 
     )
 }

@@ -20,3 +20,9 @@
     min-height: 160px;
     align-items: center;
 }
+
+.productLayout{
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
