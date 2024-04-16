@@ -1,0 +1,29 @@
+.abcd{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.ab{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cd{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 20px;
+}
+@media screen and (max-width : 768px){
+    .abcd{
+        flex-direction: column;
+    }
+
+    .cd{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

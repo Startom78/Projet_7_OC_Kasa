@@ -1,8 +1,10 @@
 import { useParams } from "react-router-dom"
 import Data from '../logements.json'
 import Tag from "./tag"
-import '../styles/product.css'
 import Collapser from "./Collapser"
+import '../styles/product.css'
+import Ratings from "./Ratings"
+import LayoutAbcd from "./Layouts/LayoutAbcd"
 
 
 function InformationsProduct() {
@@ -15,37 +17,52 @@ function InformationsProduct() {
     return(
         <div className="main">
 
-            <div >
-                <h2>
-                    {productData.title}
-                </h2>
+            <LayoutAbcd
+                componentA = {
+                <>
+                    <h2>
+                        {productData.title}
+                    </h2>
 
-                <h3> 
-                    {productData.location}
-                </h3>
-
-                <div className="tags">
+                    <h3> 
+                        {productData.location}
+                    </h3>
+                </>
+                } 
+                
+                componentB = {
                     <Tag>
-
+    
                         {tableauTagsValues.map((tag, index) => (
                             <div className = 'tag' key={index}>{tag} </div> ))}
+    
+                    </Tag>  
+                }
 
-                    </Tag>
-                </div>
-                <div className="profileAndStars">
+                componentC = {
+                    <div className="profile">
 
-                    <h3>
-                        {productData.host.name}
+                        <div className="profileName">
+                            {productData.host.name.split(" ").map(name => <h3 key= {`name-${name}`}> {name} </h3>)}
+                            
+                        </div>
+
+                        <img className= 'imgProfile' src = {productData.host.picture} alt = '' />
                         
-                    </h3>
+                    </div>
+                }
 
-                    <img className= 'imgProfile' src = {productData.host.picture} alt = '' />
-                    <FontAwesomeIcon icon="fa-duotone fa-star" />
-                </div> 
-            </div>
+                componentD = {
+                    <div> 
+                        <Ratings 
+                            value = {productData.rating}
+                        />
+                    </div>
+                }
+            />
 
-            <div className="collapsers">
-                <Collapser title={'Description'} className= 'collapserProduct'>
+            <div className="collapserdescriptions">
+                <Collapser title={'Description'}>
 
                     {productData.description}
                                 
@@ -53,7 +70,7 @@ function InformationsProduct() {
 
                 <Collapser title={'Equipements'}>
 
-                {productData.equipments}
+                {productData.equipments.map(eq => <p key={"equipment_" + eq}> {eq} </p>)}
                     
                 </Collapser>
             </div>

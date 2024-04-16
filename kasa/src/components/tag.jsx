@@ -1,6 +1,6 @@
 function Tag({children}) {
     return(
-        <div>
+        <div className="tags">
             {children}
         </div>
     )

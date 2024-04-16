@@ -1,22 +1,19 @@
-import '../../styles/product.css'
+import Header from "../Header";
+import Footer from "../Footer"
+import '../../styles/LayoutHome.css'
+import LayoutPage from "./LayoutPage";
 
-const LayoutProduct = ({header, main, footer}) => {
+const LayoutProduct = ({main}) => {
     return (
-        <div className="productLayout">
-
-            <header className='header wrapper'>
-                {header}
-             </header>
-
-            <div className='wrapper'>
+        <LayoutPage
+            header = {<Header />}
+            main = 
+            {<div className="layout-page">
                 {main}
             </div>
-
-            <footer className='footer'>
-                {footer}
-            </footer>
-
-        </div>
+            }
+            footer={<Footer />}
+        />
     )
 }
 

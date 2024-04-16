@@ -12,10 +12,7 @@ h3{
 }
 
 .productBanner {
-    display: flex;
-    position: relative;
-    justify-content: center; 
-    align-items: center;
+  position: relative;
     border: 1px solid red;
     border-radius: 30px;
     overflow: hidden;
@@ -30,36 +27,38 @@ h3{
   }
   
   .productBanner .chevron {
-    position: absolute;
     font-size: 100px;
     font-weight: 100;
     color: white;
     border: 1px solid blue;
     cursor: pointer;
-
+    
   }
   
-  .chevron:first-child {
-    left: 0; 
+  .productBanner .uiContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    
   }
   
-  .chevron:last-child {
-    right: 0; 
-  }
-  
-
 .productLayout .wrapper{
     padding: 0 44px;
     flex: 1;
 }
 
- .productLayout .counter {
+ .productBanner .counter {
     display: flex;
-    position: absolute;
+    align-self: end;
     justify-content: center;
-    bottom: 20px;
     font-weight: bold;
-    color: black;
+    margin-bottom: 20px;
+    color:white;
     border: 1px solid green;
 }
 
@@ -68,12 +67,15 @@ h3{
   margin-top: 20px;
 }
 
+.tags{
+  display: flex;
+  gap: 5px;
+}
 .tag{
-  display: inline-block;
   text-align: center;
   border-radius: 10px;
-  min-width: 150px;
-  margin-right: 20px;
+  min-width: 74px;
+  padding: 5px 10px;
   background-color: #FF6060;
   color: white;
 }
@@ -84,19 +86,36 @@ h3{
   height: 80px;
 }
 
-.profileAndStars{
+.collapserdescriptions{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+}
+
+.profile{
   display: flex;
   flex-direction: row;
   justify-content: end;
   align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
   gap: 20px;
 }
 
-.collapserProduct{
-  border: 1px solid yellow;
-  width: 40%;
+.profileName{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 5px;
 }
+
+.stars{
+  display: flex;
+  justify-content: end;
+  font-size: 30px;
+  gap: 10px;
+  color:  #E3E3E3;
+  border: 1px solid red;
+}
+
+
+
 
