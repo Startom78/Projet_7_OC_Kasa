@@ -90,6 +90,7 @@ h3{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 20px;
+  margin-top: 20px;
 }
 
 .profile{
@@ -109,11 +110,18 @@ h3{
 
 .stars{
   display: flex;
-  justify-content: end;
-  font-size: 30px;
   gap: 10px;
+}
+
+.star{
+  font-size: 30px;
   color:  #E3E3E3;
-  border: 1px solid red;
+}
+
+@media screen and (max-width : 768px) {
+  .productBanner .chevron{
+    font-size : 30px;
+  }
 }
 
 
