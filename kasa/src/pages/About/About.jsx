@@ -6,9 +6,9 @@ import AboutComponent from '../../components/About'
 function About() {
     return (
         <Layout 
-            hero = {<Banner 
+            hero = {<Banner classes = {['about']}
                 imageUrl={'./images/about_banner.png'}
-                showTitle={false}/>} 
+                title= '' />} 
             
             content={
                 <div>

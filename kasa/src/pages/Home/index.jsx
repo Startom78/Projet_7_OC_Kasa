@@ -12,7 +12,7 @@ function Home() {
         <Layout 
             hero = {<Banner
                 imageUrl={'./images/header_banner.png'}
-                showTitle={true} />} 
+                title='Chez vous, partout et ailleurs' />} 
             content={
                 <Cards>
                    {array.map((logement,index) => <Card key = {"card-"+ index + "-" + logement.title} title = {logement.title} cover = {logement.cover} link = {"/product/" + logement.id} />)}

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useLocation, useParams, } from "react-router-dom"
 import Data from '../logements.json'
 import Tag from "./tag"
 import Collapser from "./Collapser"
@@ -11,6 +11,8 @@ function InformationsProduct() {
     const array = JSON.parse(JSON.stringify(Data)) 
     const {id : productId} = useParams()
     const productData = array.find(logement => productId === logement.id)
+    const location = useLocation()
+    console.log(location)
     const tableauTagsValues = Object.values(productData.tags)
     console.log(tableauTagsValues)
     console.log(productData.host)
@@ -19,7 +21,7 @@ function InformationsProduct() {
 
             <LayoutAbcd
                 componentA = {
-                <>
+                <div className="productLabel">
                     <h2>
                         {productData.title}
                     </h2>
@@ -27,7 +29,7 @@ function InformationsProduct() {
                     <h3> 
                         {productData.location}
                     </h3>
-                </>
+                </div>
                 } 
                 
                 componentB = {

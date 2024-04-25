@@ -4,9 +4,15 @@
     align-items: center;
     border: 1px solid purple;
     gap: 30px;
-    padding: 0 5%;
+    padding: 0 100px;
 }
 
 .collapsers .text{
     color: #FF6060;
+}
+
+@media screen and (max-width: 768px) {
+    .collapsers{
+        padding: 0;
+    }
 }

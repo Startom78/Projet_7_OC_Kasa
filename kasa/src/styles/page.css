@@ -31,4 +31,9 @@
     .header .wrapper{
         justify-content: space-between;
     }
+
+    .pageLayout .wrapper{
+        padding: 0 20px;
+        min-height: 80px;
+    }
 }

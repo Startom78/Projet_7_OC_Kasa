@@ -1,22 +1,21 @@
 .cards {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, 340px);
-    grid-auto-rows: 340px;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     height: 100%;
     width: 100%;
     gap: 50px;
-    padding: 50px 25px;
-    margin-top: 43px;
+    padding: 50px;
     border-radius: 25px;
     background-color: #F6F6F6;
-    border: 1px solid green;
     
 }
 
 @media screen and (max-width : 768px) {
     .cards{
         background-color: transparent;
+        padding: 0;
+        gap: 20px;
     }
 }
 
