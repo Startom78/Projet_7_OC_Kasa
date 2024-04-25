@@ -1,8 +1,8 @@
-import { useLocation, useParams, } from "react-router-dom"
+import {useLocation, useNavigate, useParams} from "react-router-dom"
 import Data from '../logements.json'
 import Tag from "./tag"
 import Collapser from "./Collapser"
-import '../styles/product.css'
+import '../styles/product.scss'
 import Ratings from "./Ratings"
 import LayoutAbcd from "./Layouts/LayoutAbcd"
 
@@ -12,7 +12,13 @@ function InformationsProduct() {
     const {id : productId} = useParams()
     const productData = array.find(logement => productId === logement.id)
     const location = useLocation()
+    const navigate = useNavigate()
+    console.log(productData)
     console.log(location)
+    if (productData === undefined) {
+        navigate('*')
+        return null
+    }
     const tableauTagsValues = Object.values(productData.tags)
     console.log(tableauTagsValues)
     console.log(productData.host)

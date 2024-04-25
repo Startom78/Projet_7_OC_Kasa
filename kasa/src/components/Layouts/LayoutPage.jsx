@@ -1,4 +1,4 @@
-import '../../styles/page.css'
+import '../../styles/page.scss'
 
 const LayoutPage = ({header, main, footer}) => {
     return (

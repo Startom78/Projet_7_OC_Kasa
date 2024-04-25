@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { FaChevronUp, FaChevronDown } from 'react-icons/fa'
-import '../styles/collapser.css'
+import '../styles/collapser.scss'
 
 const Collapser = ({title, children, open = true}) => { 
     const [toggle, setToggle] = useState(open)

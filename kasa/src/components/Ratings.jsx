@@ -1,5 +1,5 @@
 import { FaStar } from 'react-icons/fa'
-import '../styles/product.css'
+import '../styles/product.scss'
 
 const Ratings = ({value}) => {
     const array = new Array(5).fill(1)

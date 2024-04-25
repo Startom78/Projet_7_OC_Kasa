@@ -1,5 +1,5 @@
-import '../styles/cards.css'
-import '../styles/main.css'
+import '../styles/cards.scss'
+import '../styles/main.scss'
 
 function Cards({children}) {
    return ( 

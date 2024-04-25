@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useParams } from "react-router-dom"
 import Data from '../../src/logements.json'
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
-import '../styles/product.css'
+import '../styles/product.scss'
 
 function ProductBanner() {
     const array = Data
