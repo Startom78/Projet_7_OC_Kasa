@@ -1,3 +1,5 @@
+@import 'mixins';
+
 .cards {
     display: grid;
     justify-content: center;
@@ -7,7 +9,7 @@
     gap: 50px;
     padding: 50px;
     border-radius: 25px;
-    background-color: #F6F6F6;
+    background-color: $backgroundColor;
     
 }
 

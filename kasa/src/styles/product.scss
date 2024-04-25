@@ -1,7 +1,7 @@
-
+@import 'mixins';
  
  .profileName h2, .profileName h3, .productLabel{
-  color:  #FF6060;
+  color: $mainColorTheme;
 }
 
  .profileName h2{
@@ -30,15 +30,13 @@
   .productBanner .chevron {
     font-size: 100px;
     font-weight: 100;
-    color: white;
+    color: $titlesChevronsCounter;
     cursor: pointer;
     
   }
   
   .productBanner .uiContainer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexSpaceBetweenCenter;
     position: absolute;
     left: 0;
     top: 0;
@@ -53,12 +51,11 @@
 }
 
  .productBanner .counter {
-    display: flex;
-    align-self: end;
-    justify-content: center;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color:white;
+  @include flexCenter;
+  align-self: end;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color:$titlesChevronsCounter;
 }
 
 .main{
@@ -75,8 +72,8 @@
   border-radius: 10px;
   min-width: 74px;
   padding: 5px 10px;
-  background-color: #FF6060;
-  color: white;
+  background-color: $mainColorTheme;
+  color: $titlesChevronsCounter;
 }
 
 .imgProfile{
@@ -93,16 +90,12 @@
 }
 
 .profile{
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  align-items: center;
+  @include profile;
   gap: 20px;
 }
 
 .profileName{
-  display: flex;
-  flex-direction: column;
+  @include flexColumn;
   align-items: end;
   gap: 5px;
 }
@@ -114,7 +107,7 @@
 
 .star{
   font-size: 30px;
-  color:  #E3E3E3;
+  color:  $star;
 }
 
 @media screen and (max-width : 768px) {

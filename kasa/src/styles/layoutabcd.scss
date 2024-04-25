@@ -1,21 +1,21 @@
+@import 'mixins';
+
 .abcd{
-    display: flex;
-    justify-content: space-between;
+    @include flexSpaceBetween;
     width: 100%;
 }
 
 .ab{
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
     gap: 20px;
 }
 
 .cd{
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
     align-items: end;
     gap: 20px;
 }
+
 @media screen and (max-width : 768px){
     .abcd{
         flex-direction: column;

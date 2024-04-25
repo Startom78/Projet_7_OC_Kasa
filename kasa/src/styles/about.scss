@@ -1,13 +1,13 @@
+@import 'mixins';
+
 .collapsers {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexColumnCenter;
     gap: 30px;
     padding: 0 100px;
 }
 
 .collapsers .text{
-    color: #FF6060;
+    color: $mainColorTheme;
 }
 
 @media screen and (max-width: 768px) {

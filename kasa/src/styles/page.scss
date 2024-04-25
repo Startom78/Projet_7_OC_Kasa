@@ -1,13 +1,13 @@
+@import 'mixins';
+
 .pageLayout{
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
     min-height: 100dvh;
     gap: 30px;
 }
 
 .pageLayout .main {
     flex: 1;
-
 }
 
 .pageLayout .wrapper{
@@ -16,14 +16,12 @@
 }
 
 .pageLayout .header{
-    display: flex;
+    @include flexAlignCenter;
     min-height: 160px;
-    align-items: center;
 }
 
 .productLayout{
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
     min-height: 100dvh;
 }
 

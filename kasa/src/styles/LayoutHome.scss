@@ -1,5 +1,6 @@
+@import 'mixins';
+
 .layout-page{
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
     gap: 30px;
 }

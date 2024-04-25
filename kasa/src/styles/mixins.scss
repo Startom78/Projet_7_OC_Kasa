@@ -1,0 +1,86 @@
+$mainColorTheme : #FF6060;
+$titlesChevronsCounter : white;
+$backgroundColor : #F6F6F6;
+$backgroundFooter : black;
+$star : #E3E3E3;
+
+@mixin flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flexColumnCenter{
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+}
+
+@mixin flexSpaceBetween{
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flexSpaceBetweenCenter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flexAlignCenter{
+    display: flex;
+    align-items: center;
+}
+
+@mixin flexCenterAbsolute{
+    display: flex;
+    text-align: center;
+    position: absolute;
+}
+
+@mixin flexRelativeHidden{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+@mixin mixinBanner{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+@mixin mixinFooter{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+@mixin main404{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+@mixin profile{
+    display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+
+@mixin fontFamily{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

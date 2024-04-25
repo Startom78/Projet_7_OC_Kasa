@@ -1,3 +1,5 @@
+@import 'mixins';
+
 .collapser {
     display: flex;
     flex-direction: column;
@@ -7,26 +9,23 @@
 }
 
 .collapser .title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    background-color: #FF6060;
+    @include flexSpaceBetweenCenter;
+    color: $titlesChevronsCounter;
+    background-color: $mainColorTheme;
     font-size: 24px;
     font-weight: 700;
     padding: 5px 20px; 
 }
 
 .collapser .content {
-    background-color: #F6F6F6;
-    color: #FF6060;
+    background-color: $backgroundColor;
+    color: $mainColorTheme;
     padding: 20px;
     border-radius: 0 0 10px 10px;
 }
 
 .chevron {
-    display: flex;
-    justify-content: center;
+    @include flexCenter;
     width: auto;
     font-size: 30px;
 }

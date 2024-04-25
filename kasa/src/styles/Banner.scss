@@ -1,15 +1,13 @@
+@import 'mixins';
+
 .header {
-    display: flex;
-    justify-content: space-between;
+    @include flexSpaceBetween;
     width: 100%;
-    
 }
 
 h1,li {
     font-family: 'Montserrat', sans-serif;
 }
-
-
 
 a {
     text-decoration: none;
@@ -20,18 +18,13 @@ a:hover {
 }
 
 a:visited {
-    color: #FF6060;
+    color: $mainColorTheme;
 }
 
 .banner {
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    @include mixinBanner;
     border-radius: 25px;
-    height: 220px;
-    
+    height: 220px;  
 }
 
 .imgBanner {
@@ -41,11 +34,10 @@ a:visited {
     object-fit: cover;
     filter: brightness(0.5);
 }
+
 h1 {
-    display: flex;
-    text-align: center;
-    position: absolute;
-    color: white;
+    @include flexCenterAbsolute;
+    color: $titlesChevronsCounter;
     font-weight: 500;
     font-size: 48px;
 }
@@ -55,10 +47,8 @@ h1 {
         height: 300px;
     }
 
-
     h1{
         font-size: 24px;
         text-align: left;
-        
     }
 }

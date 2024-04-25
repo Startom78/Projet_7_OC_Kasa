@@ -1,17 +1,14 @@
+@import 'mixins';
+
 .footer {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    background-color: black;
-    color: white;
+    @include mixinFooter;
+    background-color: $backgroundFooter;
+    color: $titlesChevronsCounter;
     height: 210px;
 }
 
 .footerInfos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexColumnCenter;
     gap: 30px;
 }
 

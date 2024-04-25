@@ -1,5 +1,7 @@
+@import 'mixins';
+
 .navbar {
-    color: #FF6060;
+    color: $mainColorTheme;
     font-weight: 500;
 }
 
