@@ -1,12 +1,11 @@
 import ProductBanner from "./ProductBanner"
 import InformationsProduct from "./infoProduct"
 
-function ProductComponent() {
-
+function ProductComponent({logement}) {
     return (
         <>
-            <ProductBanner />
-            <InformationsProduct />
+            <ProductBanner logement = {logement} />
+            <InformationsProduct logement = {logement} />
         </>
         
     )

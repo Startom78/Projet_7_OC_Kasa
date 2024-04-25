@@ -2,12 +2,18 @@ import Banner from '../../components/Banner'
 import Cards from '../../components/Cards'
 import Card from '../../components/Card'
 import Layout from '../../components/Layouts/LayoutHome'
-import Data from '../../../src/logements.json'
+import { useEffect, useState } from 'react'
 
 
 
 function Home() {
-    const array = JSON.parse(JSON.stringify(Data))
+    const [logements, setLogements] = useState(null)
+    useEffect( () => {
+        fetch('/logements.json') 
+            .then(res => res.json())
+            .then(data => setLogements(data))  
+    }, [])
+    if(logements === null) return(<></>)
     return (
         <Layout 
             hero = {<Banner
@@ -15,7 +21,7 @@ function Home() {
                 title='Chez vous, partout et ailleurs' />} 
             content={
                 <Cards>
-                   {array.map((logement,index) => <Card key = {"card-"+ index + "-" + logement.title} title = {logement.title} cover = {logement.cover} link = {"/product/" + logement.id} />)}
+                   {logements.map((logement,index) => <Card key = {"card-"+ index + "-" + logement.title} title = {logement.title} cover = {logement.cover} link = {"/product/" + logement.id} />)}
                </Cards>
             } 
         />     
