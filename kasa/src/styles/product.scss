@@ -17,6 +17,15 @@
   position: relative;
   border-radius: 30px;
   overflow: hidden;
+  &::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60px;
+    background: linear-gradient(#0000, #0008);
+  }
   }
   
   .productBanner .imgProduct {
@@ -25,7 +34,9 @@
     height: auto; 
     max-height: 400px;
     object-fit: cover;
+    
   }
+
   
   .productBanner .chevron {
     font-size: 100px;
