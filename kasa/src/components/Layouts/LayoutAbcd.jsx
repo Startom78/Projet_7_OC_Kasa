@@ -1,4 +1,4 @@
-import '../../styles/layoutabcd.scss'
+import '../../styles/layouts/layoutabcd.scss'
 
 const LayoutAbcd= ({componentA, componentB, componentC, componentD}) => {
     return(

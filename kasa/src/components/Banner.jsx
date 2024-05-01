@@ -1,13 +1,12 @@
-import '../styles/Banner.scss'
+import '../styles/components/banner.scss'
 
 function Banner({imageUrl, title, classes = []}) {
-        return (     
-            <div className={['banner',...classes].join(' ')}>
-                <img src= {imageUrl} alt = " Banniere de Kasa" className='imgBanner'/>
-                 <h1> {title} </h1>
-            </div>
-          )
-    
+  return (     
+      <div className={['banner',...classes].join(' ')}>
+        <img src= {imageUrl} alt = "Banniere de Kasa" className='imgBanner'/>
+        <h1> {title} </h1>
+      </div>
+    )
 }
 
 export default Banner

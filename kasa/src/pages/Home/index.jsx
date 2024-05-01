@@ -1,28 +1,39 @@
+import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import Banner from '../../components/Banner'
 import Cards from '../../components/Cards'
 import Card from '../../components/Card'
 import Layout from '../../components/Layouts/LayoutHome'
-import { useEffect, useState } from 'react'
 
+import DataProvider from "../../hooks/api"
 
 
 function Home() {
-    const [logements, setLogements] = useState(null)
+    const navigate = useNavigate()
+    const {data: logements, loading, error} = DataProvider.GetLogements()
+
     useEffect( () => {
-        fetch('/logements.json') 
-            .then(res => res.json())
-            .then(data => setLogements(data))  
-    }, [])
-    if(logements === null) return(<></>)
+        if (error) {
+            navigate("/error")
+        }
+    }, [error, navigate])
+
+    if(!logements) return(<></>)
+
     return (
         <Layout 
             hero = {<Banner
                 imageUrl={'./images/header_banner.png'}
                 title='Chez vous, partout et ailleurs' />} 
             content={
-                <Cards>
-                   {logements.map((logement,index) => <Card key = {"card-"+ index + "-" + logement.title} title = {logement.title} cover = {logement.cover} link = {"/product/" + logement.id} />)}
-               </Cards>
+                loading ? (
+                    <div>loading ...</div>
+                ) : (
+                    <Cards>
+                        {logements.map((logement,index) => <Card key = {"card-"+ index + "-" + logement.title} title = {logement.title} cover = {logement.cover} link = {"/product/" + logement.id} />)}
+                    </Cards>
+                )
             } 
         />     
     )

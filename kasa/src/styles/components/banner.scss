@@ -1,4 +1,4 @@
-@import 'mixins';
+@import '../index';
 
 .header {
     @include flexSpaceBetween;

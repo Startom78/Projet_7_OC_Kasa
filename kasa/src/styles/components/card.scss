@@ -1,0 +1,43 @@
+@import '../index';
+
+.card {
+    @include flexRelativeHidden;
+    border-radius: 10px;
+    aspect-ratio: 1/1;
+    background: linear-gradient(180deg, rgba(255,96,96,1) 21%, rgba(170,90,90,1) 100%);
+
+    & .figure {
+        width: 100%;
+        height: 100%;
+    }
+
+    & .imgCard {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    & .description{
+        display: flex;
+        height: 100%;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        align-items: end;
+        justify-content: start;
+        background : linear-gradient(#ffffff00, #00000088);
+        padding: 10px;
+        color: $titlesChevronsCounter;
+    }
+
+    /*
+    .link{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    */
+}

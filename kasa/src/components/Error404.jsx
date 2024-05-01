@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import '../styles/main404.scss'
+import '../styles/pages/main404.scss'
 
 
-function Error() {
+const Error = () => {
     return (
         <div className="main404">
 

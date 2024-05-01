@@ -1,4 +1,4 @@
-@import 'mixins';
+@import '../index';
  
  .profileName h2, .profileName h3, .productLabel{
   color: $mainColorTheme;
@@ -13,60 +13,9 @@
   font-size: 18px;
 }
 
-.productBanner {
-  position: relative;
-  border-radius: 30px;
-  overflow: hidden;
-  &::before{
-    position: absolute;
-    content: '';
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 60px;
-    background: linear-gradient(#0000, #0008);
-  }
-  }
-  
-  .productBanner .imgProduct {
-    display: block;
-    width: 100%;
-    height: auto; 
-    max-height: 400px;
-    object-fit: cover;
-    
-  }
-
-  
-  .productBanner .chevron {
-    font-size: 100px;
-    font-weight: 100;
-    color: $titlesChevronsCounter;
-    cursor: pointer;
-    
-  }
-  
-  .productBanner .uiContainer{
-    @include flexSpaceBetweenCenter;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    
-  }
-  
 .productLayout .wrapper{
     padding: 0 44px;
     flex: 1;
-}
-
- .productBanner .counter {
-  @include flexCenter;
-  align-self: end;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color:$titlesChevronsCounter;
 }
 
 .main{
@@ -111,26 +60,9 @@
   gap: 5px;
 }
 
-.stars{
-  display: flex;
-  gap: 10px;
-}
-
-.star{
-  font-size: 30px;
-  color:  $star;
-}
-
 @media screen and (max-width : 768px) {
   .productBanner .chevron{
     font-size : 30px;
-  }
-
-  .stars{
-    gap: 5px;
-  }
-  .star{
-    font-size: 18px;
   }
 
   .imgProfile{

@@ -1,0 +1,18 @@
+@import "../index";
+
+.stars{
+    display: flex;
+    gap: 10px;
+
+    .star{
+        font-size: 30px;
+        color:  $star;
+    }
+
+    @media screen and (max-width : 768px) {
+        gap: 5px;
+        .star{
+            font-size: 18px;
+        }
+    }
+}

@@ -1,16 +1,15 @@
 import { Link } from 'react-router-dom';
-import '../styles/card.scss'
+import '../styles/components/card.scss'
 
 
 function Card({title, cover, link}) {
     return (
-            <figure className='card'>
-                
+        <Link to = {link} className='card'>
+            <figure className='figure'>
                 <img className = 'imgCard' src={cover} alt = '' />
                 <figcaption className='description'> {title} </figcaption>
-                <Link to = {link} className='link' /> 
             </figure>
-
+        </Link>
     )
 }
 

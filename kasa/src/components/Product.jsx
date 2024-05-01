@@ -1,12 +1,15 @@
-import ProductBanner from "./ProductBanner"
+import Lightbox from "./Lightbox"
 import InformationsProduct from "./infoProduct"
 
-function ProductComponent({logement}) {
+function ProductComponent({logement, loading}) {
     return (
-        <>
-            <ProductBanner logement = {logement} />
-            <InformationsProduct logement = {logement} />
-        </>
+        <>{loading ? (
+            <div>loading...</div>
+        ) : (<>
+                <Lightbox pictures = {logement ? logement.pictures : []} />
+                <InformationsProduct logement = {logement} />
+            </>
+        )}</>
         
     )
 }

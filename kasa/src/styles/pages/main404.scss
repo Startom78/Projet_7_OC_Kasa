@@ -1,0 +1,40 @@
+@import '../index';
+
+.main404{
+    @include flexColumnCenter;
+    @include flexAlignCenter;
+    color: $mainColorTheme;
+
+    .editNumber404 {
+        @include flexCenter;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 288px;
+    }
+
+    .editText404 {
+        font-weight: 500;
+        font-size: 35px;
+    }
+
+    .linkToMain {
+        font-size: 16px;
+        margin-top: 50px;
+    }
+
+    @media screen and (max-width : 768px){
+        margin: 80px 0;
+
+        .editNumber404{
+            font-size: 10rem;
+        }
+
+        .editText404{
+            font-size: 20px;
+        }
+
+        .linkToMain{
+            margin-top: 200px;
+        }
+    }
+}

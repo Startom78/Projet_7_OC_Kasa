@@ -1,0 +1,56 @@
+@import '../index';
+
+.lightbox {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 300px;
+
+    &::before{
+      position: absolute;
+      content: '';
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 60px;
+      background: linear-gradient(#0000, #0008);
+    }
+    
+    & .picture {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    & .uiContainer{
+        @include flexSpaceBetweenCenter;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        
+      }
+    
+    & .chevron {
+      font-size: 100px;
+      font-weight: 100;
+      color: $titlesChevronsCounter;
+      cursor: pointer;
+    }
+    
+    & .counter {
+      @include flexCenter;
+      align-self: end;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color:$titlesChevronsCounter;
+    }
+    
+    @media screen and (max-width : 768px) {
+        & .chevron {
+          font-size : 30px;
+        }
+    }
+} 

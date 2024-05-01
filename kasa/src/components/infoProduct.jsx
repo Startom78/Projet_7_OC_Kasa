@@ -1,18 +1,13 @@
 import Tag from "./tag"
 import Collapser from "./Collapser"
-import '../styles/product.scss'
+import '../styles/pages/product.scss'
 import Ratings from "./Ratings"
 import LayoutAbcd from "./Layouts/LayoutAbcd"
-import {useEffect, useState} from "react"
-
 
 function InformationsProduct({logement}) {
-   
-    const [tableauTagsValues, setTableauTagsValues] = useState(undefined)
-    useEffect(()=>{
-        setTableauTagsValues(Object.values(logement.tags))
-    },[logement])
-    if(tableauTagsValues === undefined) return (<></>)
+
+    if (!logement) return (<></>)
+
     return(
         <div className="main">
 
@@ -31,10 +26,9 @@ function InformationsProduct({logement}) {
                 
                 componentB = {
                     <Tag>
-    
-                        {tableauTagsValues.map((tag, index) => (
-                            <div className = 'tag' key={index}>{tag} </div> ))}
-    
+                        {logement.tags.map((tag, index) =>
+                            <div className = 'tag' key={index}>{tag}</div>
+                        )}
                     </Tag>  
                 }
 

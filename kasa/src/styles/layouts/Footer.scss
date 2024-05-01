@@ -1,4 +1,4 @@
-@import 'mixins';
+@import '../index';
 
 .footer {
     @include mixinFooter;
@@ -10,8 +10,12 @@
 .footerInfos {
     @include flexColumnCenter;
     gap: 30px;
-}
 
-.footerInfos .copyright {
-    font-size: 20px;
+    & .link {
+        cursor: pointer;
+    }
+
+    & .copyright {
+        font-size: 20px;
+    }
 }

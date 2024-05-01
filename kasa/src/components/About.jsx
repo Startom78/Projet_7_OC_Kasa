@@ -1,5 +1,5 @@
 import Collapser from './Collapser'
-import '../styles/about.scss'
+import '../styles/pages/about.scss'
 
 function AboutComponent()  {
 

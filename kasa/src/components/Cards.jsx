@@ -1,5 +1,4 @@
-import '../styles/cards.scss'
-import '../styles/main.scss'
+import '../styles/layouts/cards.scss'
 
 function Cards({children}) {
    return ( 
